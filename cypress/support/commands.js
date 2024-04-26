@@ -1,15 +1,4 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
+
 Cypress.Commands.add('login', (usuario, senha) => { 
     cy.get('#username').type (usuario)
     cy.get('#password').type (senha)
@@ -28,9 +17,9 @@ Cypress.Commands.add('preCadastro' , (email, senha , nome , sobrenome) => {
 
 })
 
-Cypress.Commands.add('detalhesConta') ,(nome, sobrenome , usuario)
-cy.get('#account_first_name').type(nome)
-cy.get('#account_last_name').type(sobrenome)
-cy.get('#account_display_name').type(usuario)
-cy.get('.woocommerce-Button').click()
+//Cypress.Commands.add('detalhesConta') ,(nome, sobrenome , usuario)
+//cy.get('#account_first_name').type(nome)
+//cy.get('#account_last_name').type(sobrenome)
+//cy.get('#account_display_name').type(usuario)
+//cy.get('.woocommerce-Button').click()
 
