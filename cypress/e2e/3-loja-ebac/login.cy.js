@@ -39,7 +39,7 @@ it('Deve exibir uma mensagem de erro ao inserir senha inválida', () => {
     cy.get('.woocommerce-form > .button').click()
     cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain','Olá, henrique.teste (não é henrique.teste? Sair)')   
  });
-  it.only('Deve fazer login com sucesso  - Usando fixture', () => {
+  it('Deve fazer login com sucesso  - Usando fixture', () => {
     cy.fixture('perfil').then(dados => {
     cy.get('#username'). type (dados.usuário, {log : false})
     cy.get('#password'). type (dados.senha, {log : false})
@@ -50,6 +50,13 @@ it('Deve exibir uma mensagem de erro ao inserir senha inválida', () => {
     
   });   
  
+  it.only('Deve fazer Login com sucesso  - Usando comandos customizados', () => {
+    cy.login('henrique.teste@teste.com.br','Baranga1')
+    cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain','Olá, henrique.teste (não é henrique.teste? Sair)') 
+    
+});
+
+
 } )
 
  
