@@ -5,7 +5,7 @@ describe('Funcionalidade: detalhes da conta', () => {
   beforeEach(() => {
     cy.visit('minha-conta/edit-account')
     cy.fixture('perfil').then(login =>{
-      cy.login('henrique.teste@teste.com.br','Baranga1')
+      cy.login(login.usuario , login.senha)
     })
    
   });

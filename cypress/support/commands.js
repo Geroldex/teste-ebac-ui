@@ -1,9 +1,9 @@
-
 Cypress.Commands.add('login', (usuario, senha) => { 
-    cy.get('#username').type (usuario)
-    cy.get('#password').type (senha)
-    cy.get('.woocommerce-form > .button').click()
-})
+    cy.get('#username').type(usuario);
+    cy.get('#password').type(senha);
+    cy.get('.woocommerce-form > .button').click();
+});
+
 
 Cypress.Commands.add('preCadastro' , (email, senha , nome , sobrenome) => {
     cy.get('#reg_email').type(email)
@@ -17,10 +17,10 @@ Cypress.Commands.add('preCadastro' , (email, senha , nome , sobrenome) => {
 
 })
 
-Cypress.Commands.add('detalhesConta' ,(nome, sobrenome , usuario) =>{
+Cypress.Commands.add('detalhesConta' ,(nome, sobrenome , apelido) =>{
     cy.get('#account_first_name').type(nome)
     cy.get('#account_last_name').type(sobrenome)
-    cy.get('#account_display_name').type(usuario)
+    cy.get('#account_display_name').type(apelido)
     cy.get('.woocommerce-Button').click()
 
 })
